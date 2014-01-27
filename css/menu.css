@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */
+/*CSS Base*/
+#main_nav {padding: 0; margin: 0; border: 0;}
+#main_nav ul, #main_nav li {list-style: none; margin: 0; padding: 0;}
+#main_nav ul {
+	position: relative;
+	z-index: 597;
+}
+#main_nav ul li {
+	float: left;
+	min-height: 1px;
+	vertical-align: middle;
+}
+#main_nav ul li.hover,
+#main_nav ul li:hover {
+	position: relative;
+	z-index: 599;
+	cursor: default;
+}
+#main_nav ul ul {visibility: hidden; position: absolute; top: 100%; left: 0; z-index: 598; width: 100%;}
+#main_nav ul ul li {float: none;}
+#main_nav ul ul ul {top: 0; left: auto; right: -99.5%; }
+#main_nav ul li:hover > ul { visibility: visible;}
+#main_nav ul ul {bottom: 0; left: 0;}
+#main_nav ul ul {margin-top: 0; }
+#main_nav ul ul li {font-weight: normal;}
+#main_nav a { display: block; line-height: 1em; text-decoration: none; }
+
+/*Style*/
+#main_nav {
+	font-size: 12px;
+	background-repeat: repeat-x;
+	background-color: #D9CDBA;
+	border-top-color: #AC1F37;
+	border-width: 5px;
+	border-top-style: solid;
+}
+
+  #main_nav > ul { *display: inline-block; }
+
+  #main_nav:after, #main_nav ul:after {
+    content: '';
+    display: block;
+    clear: both; 
+}
+
+#main_nav a {
+	color: #6E1617;
+	padding-top: 0;
+	padding-right: 30px;
+	padding-left: 10px;
+	padding-bottom: 0;
+}
+#main_nav ul { text-transform: uppercase; }
+
+    #main_nav ul ul {
+	border-top: 4px solid #AC1F37;
+	text-transform: none;
+	min-width: 190px;
+}
+      #main_nav ul ul a {
+	background-color: #F7F5ED;
+	color: #9E031D;
+	border: 1px solid #9E031D;
+	border-top: 0 none;
+	line-height: 150%;
+	padding-top: 16px;
+	padding-right: 20px;
+	padding-left: 15px;
+	padding-bottom: 16px;
+}
+      #main_nav ul ul ul { border-top: 0 none; }
+
+      #main_nav ul ul li { position: relative }
+	  
+	  #main_nav > ul > li > a { line-height: 40px;  }
+
+#main_nav ul ul li:first-child > a {
+	border-top: 1px solid #9E031D;
+}
+        #main_nav ul ul li:hover > a {
+	background-color: #9E031D;
+}
+
+        #main_nav ul ul li:last-child > a {
+	border-radius: 0 0 3px 3px;
+	box-shadow: 0 1px 0 #D9CDBA;
+	-webkit-box-shadow: 0 1px 0 #D9CDBA;
+}
+        #main_nav ul ul li:last-child:hover > a { border-radius: 0 0 0 3px; }
+
+        #main_nav ul ul li.has-sub > a:after {
+	content: '+';
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	margin-top: -8px;
+	}
+
+    #main_nav ul li:hover > a, #main_nav ul li.active > a {
+	color: #FFF;
+	background-repeat: no-repeat;
+	background-position: right 0%;
+	background-image: url(../../../../Documents/GitHub/Space-Baby/images/menu_button.png);
+}
+    #main_nav ul li.has-sub > a:after {
+	content: '+';
+	margin-left: 5px;
+}
+    #main_nav ul li.last ul {
+      left: auto;
+      right: 0; 
+}
+      #main_nav ul li.last ul ul {
+        left: auto;
+        right: 99.5%;
+}
